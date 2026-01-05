@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "name": "Chocolate Cake",
+    "category": "Dessert",
+    "ingredients": ["Flour", "Sugar", "Cocoa Powder", "Eggs", "Butter", "Baking Powder"],
+    "steps": "Mix all ingredients, pour into a baking pan, bake at 180°C for 30-35 minutes. Let it cool and serve.",
+    "image": "images/chocolate_cake.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lemonade",
+    "category": "Drinks",
+    "ingredients": ["Lemons", "Water", "Sugar", "Ice"],
+    "steps": "Squeeze lemons, mix juice with water and sugar. Serve chilled with ice cubes.",
+    "image": "images/lemonade.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Spaghetti Bolognese",
+    "category": "Main Course",
+    "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onion", "Garlic", "Olive Oil", "Salt", "Pepper"],
+    "steps": "Cook spaghetti. In a pan, cook onion, garlic, and beef, add tomato sauce, simmer for 15 min. Serve sauce over spaghetti.",
+    "image": "images/spaghetti.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pancakes",
+    "category": "Dessert",
+    "ingredients": ["Flour", "Milk", "Eggs", "Sugar", "Baking Powder", "Butter"],
+    "steps": "Mix all ingredients into a batter. Pour onto a hot pan and cook until golden brown on both sides. Serve with syrup or fruits.",
+    "image": "images/pancakes.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mango Smoothie",
+    "category": "Drinks",
+    "ingredients": ["Mango", "Milk", "Honey", "Ice Cubes"],
+    "steps": "Blend mango pieces with milk, honey, and ice until smooth. Serve chilled.",
+    "image": "images/mango_smoothie.jpg"
+  },
+
+  {
+    "id": 6,
+    "name": "Caesar Salad",
+    "category": "Main Course",
+    "ingredients": ["Lettuce", "Croutons", "Parmesan", "Caesar Dressing", "Chicken Breast"],
+    "steps": "Grill the chicken. Toss lettuce with dressing, add croutons, parmesan, and sliced chicken. Serve chilled.",
+    "image": "images/caesar_salad.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Tomato Soup",
+    "category": "Main Course",
+    "ingredients": ["Tomatoes", "Onion", "Garlic", "Vegetable Broth", "Cream", "Salt", "Pepper"],
+    "steps": "Cook onions and garlic, add tomatoes and broth, simmer. Blend until smooth, add cream, serve hot.",
+    "image": "images/tomato_soup.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Grilled Cheese Sandwich",
+    "category": "Main Course",
+    "ingredients": ["Bread Slices", "Cheddar Cheese", "Butter"],
+    "steps": "Butter bread slices, add cheese, grill until golden brown on both sides. Serve hot.",
+    "image": "images/grilled_cheese.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Fruit Salad",
+    "category": "Dessert",
+    "ingredients": ["Apple", "Banana", "Orange", "Grapes", "Honey", "Lemon Juice"],
+    "steps": "Chop all fruits, mix with honey and lemon juice. Serve chilled.",
+    "image": "images/fruit_salad.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Chicken Curry",
+    "category": "Main Course",
+    "ingredients": ["Chicken", "Onion", "Garlic", "Ginger", "Tomatoes", "Curry Powder", "Coconut Milk", "Salt", "Oil"],
+    "steps": "Saute onions, garlic, ginger, add chicken and spices. Add tomatoes and coconut milk, simmer until cooked. Serve with rice.",
+    "image": "images/chicken_curry.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Veggie Stir Fry",
+    "category": "Main Course",
+    "ingredients": ["Broccoli", "Carrots", "Bell Pepper", "Soy Sauce", "Garlic", "Ginger", "Olive Oil"],
+    "steps": "Heat oil, sauté garlic and ginger, add vegetables, stir fry. Add soy sauce, serve hot.",
+    "image": "images/veggie_stir_fry.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Banana Smoothie",
+    "category": "Drinks",
+    "ingredients": ["Banana", "Milk", "Honey", "Ice Cubes"],
+    "steps": "Blend all ingredients until smooth. Serve chilled.",
+    "image": "images/banana_smoothie.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Chocolate Milkshake",
+    "category": "Drinks",
+    "ingredients": ["Milk", "Chocolate Syrup", "Ice Cream"],
+    "steps": "Blend milk, chocolate syrup, and ice cream until smooth. Serve cold.",
+    "image": "images/chocolate_milkshake.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Omelette",
+    "category": "Main Course",
+    "ingredients": ["Eggs", "Milk", "Salt", "Pepper", "Cheese", "Onion", "Tomato", "Butter"],
+    "steps": "Beat eggs with milk, salt, and pepper. Pour into a pan with butter, add toppings, cook until set. Serve hot.",
+    "image": "images/omelette.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Strawberry Parfait",
+    "category": "Dessert",
+    "ingredients": ["Strawberries", "Yogurt", "Granola", "Honey"],
+    "steps": "Layer yogurt, strawberries, and granola in a glass. Drizzle with honey. Serve chilled.",
+    "image": "images/strawberry_parfait.jpg"
+  }
+]
+
+

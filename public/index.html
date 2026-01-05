@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe World</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <header>
+        <h1>Recipe World</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="recipes.html" class="active">Recipes</a>
+            <a href="add-recipe.html">Add Recipe</a>
+        </nav>
+    </header>
+    <main>
+    <style>
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #ff6f61, #ff9a76);
+            color: white;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero h2 { font-size: 2.5rem; margin-bottom: 15px; font-weight:700; }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; }
+        .hero .btn {
+            padding: 12px 30px; background-color:#343a40; color:#ffc107;
+            text-decoration:none; border-radius:8px; font-weight:600;
+        }
+        .hero .btn:hover { background-color:#495057; color:#fff; }
+
+        /* FEATURED RECIPES CARDS */
+        .featured-recipes { margin:50px 20px; }
+        .featured-recipes h2 { text-align:center; font-size:2rem; margin-bottom:10px; color:#343a40; }
+        .featured-recipes p { text-align:center; color:#555; margin-bottom:30px; font-size:1.1rem; }
+
+        .cards-container {
+            display:flex; flex-wrap:wrap; gap:20px; justify-content:center;
+        }
+
+        .recipe-card {
+            background-color:#fff; border-radius:12px; width:250px; padding:10px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;
+            transition:transform 0.3s, box-shadow 0.3s; display:flex; flex-direction:column; gap:8px;
+        }
+        .recipe-card:hover { transform:translateY(-5px); box-shadow:0 12px 20px rgba(0,0,0,0.15); }
+        .recipe-card img { width:100%; height:160px; object-fit:cover; border-radius:10px; }
+        .recipe-card h3 { margin:5px 0; font-size:1.15rem; font-weight:600; color:#343a40; }
+        .recipe-card p { font-size:0.9rem; color:#555; line-height:1.3; }
+        .view-btn {
+            padding:8px 15px; background-color:#343a40; color:#ffc107; border:none;
+            border-radius:5px; font-weight:600; cursor:pointer; transition:0.3s;
+        }
+        .view-btn:hover { background-color:#495057; color:#fff; }
+
+        /* MODAL STYLES */
+    /* MODAL STYLES - SMALLER VERSION */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.6);
+        justify-content: center; align-items: center;
+        z-index: 10000; padding: 20px; overflow: auto;
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        max-width: 450px;   /* decreased width */
+        width: 90%;         /* responsive on small screens */
+        position: relative;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: 180px;      /* smaller image height */
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 12px;
+    }
+
+    .modal-content h3 { margin-top:0; font-size: 1.3rem; color:#343a40; }
+    .modal-content p { color:#555; font-size:0.95rem; line-height:1.4; margin-bottom:8px; }
+
+    .close-btn {
+        position:absolute; top:10px; right:10px;
+        background:#ff6f61; color:#fff; border:none;
+        padding:5px 10px; border-radius:5px; cursor:pointer; font-weight:600;
+    }
+    .close-btn:hover { background:#ff3b2e; }
+</style>
+
+    </style>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Discover Delicious Recipes!</h2>
+        <p>Explore, cook, and share your favorite recipes with easy-to-follow steps and tips.</p>
+        <a href="recipes.html" class="btn">See Recipes</a>
+    </section>
+
+    <!-- FEATURED RECIPES -->
+    <section class="featured-recipes">
+        <h2>Featured Recipes</h2>
+        <p>Check out some of our most popular and delicious recipes!</p>
+
+        <div class="cards-container">
+            <div class="recipe-card" data-name="Decadent Chocolate Fudge Cake" 
+                 data-category="Dessert" 
+                 data-ingredients="Flour, Sugar, Cocoa Powder, Eggs, Butter, Baking Powder" 
+                 data-steps="Mix all ingredients, bake at 180°C for 30-35 minutes, let it cool and serve." 
+                 data-image="images/chocolate_cake.jpg">
+                <img src="images/chocolate_cake.jpg" alt="Chocolate Cake">
+                <h3>Decadent Chocolate Fudge Cake</h3>
+                <p>Rich and moist chocolate cake topped with creamy chocolate frosting.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+
+            <div class="recipe-card" data-name="Tropical Mango Smoothie" 
+                 data-category="Drinks" 
+                 data-ingredients="Mangoes, Yogurt, Honey, Ice Cubes" 
+                 data-steps="Blend all ingredients until smooth, serve chilled." 
+                 data-image="images/mango_smoothie.jpg">
+                <img src="images/mango_smoothie.jpg" alt="Mango Smoothie">
+                <h3>Tropical Mango Smoothie</h3>
+                <p>Refreshing mango smoothie made with fresh mangoes and yogurt.</p>
+                <button class="view-btn">View Recipe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-modal">Close</button>
+            <img src="" alt="" id="modal-img">
+            <h3 id="modal-name"></h3>
+            <p><strong>Category:</strong> <span id="modal-category"></span></p>
+            <p><strong>Ingredients:</strong> <span id="modal-ingredients"></span></p>
+            <p><strong>Steps:</strong> <span id="modal-steps"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // MODAL SCRIPT
+        const modal = document.getElementById('recipe-modal');
+        const closeBtn = document.getElementById('close-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalName = document.getElementById('modal-name');
+        const modalCategory = document.getElementById('modal-category');
+        const modalIngredients = document.getElementById('modal-ingredients');
+        const modalSteps = document.getElementById('modal-steps');
+
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.parentElement;
+                modalImg.src = card.dataset.image;
+                modalName.textContent = card.dataset.name;
+                modalCategory.textContent = card.dataset.category;
+                modalIngredients.textContent = card.dataset.ingredients;
+                modalSteps.textContent = card.dataset.steps;
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside content
+        window.addEventListener('click', (e) => {
+            if(e.target === modal) modal.style.display = 'none';
+        });
+    </script>
+</main>
+
+
+    <footer>
+        <p>&copy; 2026 Recipe World</p>
+    </footer>
+</body>
+</html>

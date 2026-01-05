@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe - Recipe World</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🍲 Recipe World</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="add-recipe.html">Add Recipe</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add a New Recipe</h2>
+        <form id="recipe-form">
+            <label for="name">Recipe Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="Dessert">Dessert</option>
+                <option value="Main Course">Main Course</option>
+                <option value="Drinks">Drinks</option>
+            </select>
+
+            <label for="ingredients">Ingredients (comma separated):</label>
+            <textarea id="ingredients" required></textarea>
+
+            <label for="steps">Steps:</label>
+            <textarea id="steps" required></textarea>
+
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" placeholder="e.g., images/cake.jpg">
+
+            <button type="submit">Add Recipe</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Recipe World</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
